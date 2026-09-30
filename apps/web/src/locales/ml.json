@@ -1,0 +1,76 @@
+{
+  "appName": "PhytoVeyra AI",
+  "tagline": "കർഷകർക്കുള്ള AI വിള പരിപാലന പ്ലാറ്റ്‌ഫോം",
+  "demoMode": "ഡെമോ മോഡ് സജീവമാണ്",
+  "demoBadge": "AI സിമുലേഷൻ",
+  "nav": {
+    "dashboard": "ഡാഷ്‌ബോർഡ്",
+    "crops": "വിളകൾ",
+    "scan": "വിള പരിശോധന",
+    "treatment": "ചികിത്സാരീതി",
+    "schedule": "ഷെഡ്യൂൾ",
+    "recovery": "രോഗമുക്തി",
+    "weather": "കാലാവസ്ഥാ മുന്നറിയിപ്പ്",
+    "fertilizer": "വള പ്രയോഗം",
+    "assistant": "AI സഹായി",
+    "experts": "വിദഗ്ധ ഉപദേശം",
+    "admin": "അഡ്മിൻ",
+    "profile": "പ്രൊഫൈൽ"
+  },
+  "dashboard": {
+    "title": "കർഷക ഹെൽത്ത് ഡാഷ്‌ബോർഡ്",
+    "totalCrops": "ആകെ വിളകൾ",
+    "activeTreatments": "ചികിത്സയിലുള്ളവ",
+    "upcomingTasks": "അടുത്ത ജോലികൾ",
+    "recoveryProgress": "രോഗമുക്തി നിരക്ക്",
+    "cropHealthStatus": "വിള ആരോഗ്യ നില",
+    "recentScans": "സമീപകാല പരിശോധനകൾ",
+    "diseaseAlerts": "രോഗ മുന്നറിയിപ്പുകൾ",
+    "weatherWidget": "പ്രാദേശിക കാലാവസ്ഥ",
+    "quickScan": "ഇപ്പോൾ സ്കാൻ ചെയ്യുക"
+  },
+  "scan": {
+    "title": "AI വിള രോഗ നിർണ്ണയം",
+    "subtitle": "രോഗം ബാധിച്ച ഇലയുടെ ഫോട്ടോ അപ്‌ലോഡ് ചെയ്യുക",
+    "dragDrop": "ഫോട്ടോ ഇവിടെ ഇടുക അല്ലെങ്കിൽ തിരഞ്ഞെടുക്കുക",
+    "analyzing": "AI വിശകലനം ചെയ്യുന്നു...",
+    "gradCamToggle": "ഹീറ്റ്‌മാപ്പ് കാണുക",
+    "lowConfidenceWarning": "നിർണ്ണയം ഉറപ്പില്ല",
+    "lowConfidenceDetail": "കൃത്യത 65% ൽ താഴെയാണ്. വ്യക്തമായ വെളിച്ചത്തിൽ വീണ്ടും ഫോട്ടോ എടുക്കുക.",
+    "askExpertCta": "വിദഗ്ദ്ധനോട് ചോദിക്കുക"
+  },
+  "treatment": {
+    "title": "നിർദ്ദേശിച്ച ചികിത്സകൾ",
+    "problem": "കണ്ടെത്തിയ രോഗം",
+    "whyHappening": "കാരണം",
+    "immediateAction": "ഉടനടി ചെയ്യേണ്ടത്",
+    "cultural": "ജൈവ രീതികൾ",
+    "organic": "ജൈവ മരുന്ന്",
+    "chemical": "രാസ മരുന്ന്",
+    "safetyWarning": "സുരക്ഷാ മുന്നറിയിപ്പ്",
+    "sourceCitation": "അംഗീകൃത സ്രോതസ്സ്",
+    "addToSchedule": "ഷെഡ്യൂളിൽ ചേർക്കുക"
+  },
+  "recovery": {
+    "title": "രോഗമുക്തി താരതമ്യം",
+    "subtitle": "ചികിത്സയ്ക്ക് മുമ്പും ശേഷവുമുള്ള ഫോട്ടോകൾ താരതമ്യം ചെയ്യുക",
+    "initialScan": "ആദ്യ ഫോട്ടോ",
+    "followUpScan": "ഇപ്പോഴത്തെ ഫോട്ടോ",
+    "improvement": "പുരോഗതി തുക",
+    "status": "സ്ഥിതി",
+    "uploadFollowUp": "പുതിയ ഫോട്ടോ നൽകുക"
+  },
+  "assistant": {
+    "title": "AI കർഷക സഹായി",
+    "subtitle": "ശബ്ദത്തിലൂടെയോ ടെക്സ്റ്റിലൂടെയോ ചോദ്യങ്ങൾ ചോദിക്കാം",
+    "micStart": "സംസാരിക്കൂ",
+    "listening": "ശ്രദ്ധിക്കുന്നു...",
+    "placeholder": "ചോദ്യം ഇവിടെ ടൈപ്പ് ചെയ്യുക...",
+    "citations": "ആധാരങ്ങൾ"
+  },
+  "fertilizer": {
+    "title": "വള പ്രയോഗ കൽക്കുലേറ്റർ",
+    "subtitle": "വളത്തിന്റെ അളവ് കണക്കാക്കുക",
+    "calculateCta": "കണക്കുകൂട്ടുക"
+  }
+}

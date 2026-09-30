@@ -1,0 +1,76 @@
+{
+  "appName": "PhytoVeyra AI",
+  "tagline": "Closed-Loop AI Plant Healthcare & Farmer Companion",
+  "demoMode": "Demo Mode Active",
+  "demoBadge": "AI Powered Simulation",
+  "nav": {
+    "dashboard": "Dashboard",
+    "crops": "Crops",
+    "scan": "Scan Plant",
+    "treatment": "Treatment",
+    "schedule": "Schedule",
+    "recovery": "Recovery",
+    "weather": "Weather & Risk",
+    "fertilizer": "Fertilizer Calc",
+    "assistant": "AI Assistant",
+    "experts": "Ask Experts",
+    "admin": "Admin Panel",
+    "profile": "Profile"
+  },
+  "dashboard": {
+    "title": "Farmer Health Dashboard",
+    "totalCrops": "Total Crops",
+    "activeTreatments": "Active Treatments",
+    "upcomingTasks": "Upcoming Tasks",
+    "recoveryProgress": "Recovery Rate",
+    "cropHealthStatus": "Crop Health Overview",
+    "recentScans": "Recent Plant Scans",
+    "diseaseAlerts": "Disease & Pest Risk Alerts",
+    "weatherWidget": "Local Agricultural Weather",
+    "quickScan": "Scan Crop Now"
+  },
+  "scan": {
+    "title": "AI Plant Diagnosis",
+    "subtitle": "Upload or capture a photo of infected leaves, stems, or pests for instant diagnosis",
+    "dragDrop": "Drag & drop plant photo here or click to browse",
+    "analyzing": "AI Model Analyzing Plant Health...",
+    "gradCamToggle": "Show Grad-CAM Heatmap",
+    "lowConfidenceWarning": "AI Diagnosis Uncertainty Warning",
+    "lowConfidenceDetail": "Confidence is below 65%. Please upload a closer image in clear daylight or request human expert review.",
+    "askExpertCta": "Escalate to Agricultural Expert"
+  },
+  "treatment": {
+    "title": "Structured Treatment Guidance",
+    "problem": "Identified Problem",
+    "whyHappening": "Root Cause",
+    "immediateAction": "Immediate Action",
+    "cultural": "Cultural & Physical Control",
+    "organic": "Biological & Organic Option",
+    "chemical": "Approved Chemical Option",
+    "safetyWarning": "Safety & Pre-Harvest Warning",
+    "sourceCitation": "Verified Agricultural Source",
+    "addToSchedule": "Schedule Treatment Task"
+  },
+  "recovery": {
+    "title": "Plant Recovery & Before/After Comparison",
+    "subtitle": "Compare initial infection scan with current follow-up scan to track healing",
+    "initialScan": "Initial Scan (Before)",
+    "followUpScan": "Follow-Up Scan (After)",
+    "improvement": "Measured Improvement",
+    "status": "Recovery Status",
+    "uploadFollowUp": "Upload New Follow-Up Image"
+  },
+  "assistant": {
+    "title": "Multimodal AI Farmer Chatbot",
+    "subtitle": "Ask questions via Text, Image, or Voice in your preferred language",
+    "micStart": "Speak Now",
+    "listening": "Listening...",
+    "placeholder": "Type your crop health question here...",
+    "citations": "Grounded Information Sources"
+  },
+  "fertilizer": {
+    "title": "Rule-Based Fertilizer Calculator",
+    "subtitle": "Calculate exact N-P-K nutrient doses and commercial fertilizer quantities",
+    "calculateCta": "Calculate Fertilizer Doses"
+  }
+}

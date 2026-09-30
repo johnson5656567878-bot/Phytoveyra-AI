@@ -1,0 +1,76 @@
+{
+  "appName": "PhytoVeyra AI",
+  "tagline": "बहुभाषी AI फसल स्वास्थ्य, उपचार और रिकवरी प्लेटफॉर्म",
+  "demoMode": "डेमो मोड सक्रिय",
+  "demoBadge": "AI सिमुलेशन",
+  "nav": {
+    "dashboard": "डैशबोर्ड",
+    "crops": "फसलें",
+    "scan": "फसल जांच",
+    "treatment": "उपचार गाइड",
+    "schedule": "कार्य अनुसूची",
+    "recovery": "रिकवरी ट्रैकिंग",
+    "weather": "मौसम और जोखिम",
+    "fertilizer": "उर्वरक कैलकुलेटर",
+    "assistant": "AI सहायक",
+    "experts": "विशेषज्ञ सलाह",
+    "admin": "एडमिन पैनल",
+    "profile": "प्रोफाइल"
+  },
+  "dashboard": {
+    "title": "किसान स्वास्थ्य डैशबोर्ड",
+    "totalCrops": "कुल फसलें",
+    "activeTreatments": "सक्रिय उपचार",
+    "upcomingTasks": "आगामी कार्य",
+    "recoveryProgress": "सुधार दर",
+    "cropHealthStatus": "फसल स्वास्थ्य अवलोकन",
+    "recentScans": "हाल की जांच",
+    "diseaseAlerts": "रोग और कीट अलर्ट",
+    "weatherWidget": "स्थानीय मौसम",
+    "quickScan": "फसल जांचें"
+  },
+  "scan": {
+    "title": "AI फसल रोग निदान",
+    "subtitle": "तुरंत निदान के लिए प्रभावित पत्तियों की फोटो अपलोड करें",
+    "dragDrop": "फोटो यहाँ खींचें या क्लिक करें",
+    "analyzing": "AI फसल स्वास्थ्य का विश्लेषण कर रहा है...",
+    "gradCamToggle": "हीटमैप देखें",
+    "lowConfidenceWarning": "AI निदान अनिश्चितता",
+    "lowConfidenceDetail": "सटीकता 65% से कम है। कृपया साफ़ रोशनी में दोबारा फोटो लें।",
+    "askExpertCta": "कृषि विशेषज्ञ से पूछें"
+  },
+  "treatment": {
+    "title": "संरचित उपचार मार्गदर्शन",
+    "problem": "पहचानी गई समस्या",
+    "whyHappening": "मुख्य कारण",
+    "immediateAction": "तत्काल कार्रवाई",
+    "cultural": "प्राकृतिक नियंत्रण",
+    "organic": "जैविक विकल्प",
+    "chemical": "स्वीकृत रासायनिक विकल्प",
+    "safetyWarning": "सुरक्षा चेतावनी",
+    "sourceCitation": "सत्यापित स्रोत",
+    "addToSchedule": "अनुसूची में जोड़ें"
+  },
+  "recovery": {
+    "title": "फसल सुधार और तुलना",
+    "subtitle": "इलाज से पहले और बाद की तस्वीरों की तुलना करें",
+    "initialScan": "शुरुआती तस्वीर (पहले)",
+    "followUpScan": "वर्तमान तस्वीर (बाद में)",
+    "improvement": "सुधार प्रतिशत",
+    "status": "रिकवरी स्थिति",
+    "uploadFollowUp": "नई तस्वीर अपलोड करें"
+  },
+  "assistant": {
+    "title": "AI किसान चैटबॉट",
+    "subtitle": "टेक्स्ट, फोटो या आवाज द्वारा अपनी भाषा में सवाल पूछें",
+    "micStart": "बोलें",
+    "listening": "सुन रहा है...",
+    "placeholder": "अपना सवाल यहाँ लिखें...",
+    "citations": "सत्यापित स्रोत"
+  },
+  "fertilizer": {
+    "title": "उर्वरक आवश्यकता कैलकुलेटर",
+    "subtitle": "सटीक एन-पी-के और खाद की मात्रा की गणना करें",
+    "calculateCta": "मात्रा की गणना करें"
+  }
+}

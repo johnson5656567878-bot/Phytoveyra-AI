@@ -1,0 +1,76 @@
+{
+  "appName": "PhytoVeyra AI",
+  "tagline": "రైతు సంబంధిత AI పంట ఆరోగ్య వేదిక",
+  "demoMode": "డెమో మోడ్ యాక్టివ్",
+  "demoBadge": "AI సిమ్యులేషన్",
+  "nav": {
+    "dashboard": "డాష్‌బోర్డ్",
+    "crops": "పంటలు",
+    "scan": "పంట పరీక్ష",
+    "treatment": "చికిత్స విధానం",
+    "schedule": "షెడ్యూల్",
+    "recovery": "కోలుకునే విధానం",
+    "weather": "వాతావరణ హెచ్చరికలు",
+    "fertilizer": "ఎరువుల లెక్కింపు",
+    "assistant": "AI సహాయకుడు",
+    "experts": "నిపుణుల సలహా",
+    "admin": "అడ్మిన్",
+    "profile": "ప్రొఫైల్"
+  },
+  "dashboard": {
+    "title": "రైతు ఆరోగ్య డాష్‌బోర్డ్",
+    "totalCrops": "మొత్తం పంటలు",
+    "activeTreatments": "ప్రస్తుత చికిత్సలు",
+    "upcomingTasks": "రాబోయే పనులు",
+    "recoveryProgress": "కోలుకున్న శాతం",
+    "cropHealthStatus": "పంట ఆరోగ్య స్థితి",
+    "recentScans": "ఇటీవలి పరీక్షలు",
+    "diseaseAlerts": "తెగులు మరియు కీటకాల హెచ్చరికలు",
+    "weatherWidget": "స్థానిక వాతావరణం",
+    "quickScan": "ఇప్పుడే పరీక్షించండి"
+  },
+  "scan": {
+    "title": "AI పంట వ్యాధి నిర్ధారణ",
+    "subtitle": "వ్యాధి సోకిన ఆకుల ఫోటోను అప్‌లోడ్ చేయండి",
+    "dragDrop": "ఫోటోను ఇక్కడ అప్‌లోడ్ చేయండి",
+    "analyzing": "AI విశ్లేషిస్తోంది...",
+    "gradCamToggle": "హీట్‌మ్యాప్ చూడండి",
+    "lowConfidenceWarning": "సందేహాస్పదమైన ఫలితం",
+    "lowConfidenceDetail": "ఖచ్చితత్వం 65% కంటే తక్కువగా ఉంది. స్పష్టమైన ఫోటో తీయండి.",
+    "askExpertCta": "వ్యవసాయ నిపుణుడిని అడగండి"
+  },
+  "treatment": {
+    "title": "సిఫార్సు చేయబడిన చికిత్సలు",
+    "problem": "గుర్తించిన సమస్య",
+    "whyHappening": "కారణం",
+    "immediateAction": "తక్షణ చర్య",
+    "cultural": "సాగు పద్ధతులు",
+    "organic": "సేంద్రీయ పద్ధతి",
+    "chemical": "రసాయన పద్ధతి",
+    "safetyWarning": "రక్షణ హెచ్చరిక",
+    "sourceCitation": "ధృవీకరించబడిన మూలం",
+    "addToSchedule": "షెడ్యూల్‌లో చేర్చండి"
+  },
+  "recovery": {
+    "title": "పంట కోలుకునే స్థితి",
+    "subtitle": "చికిత్సకు ముందు మరియు తర్వాత ఫోటోలను పోల్చండి",
+    "initialScan": "మొదటి ఫోటో",
+    "followUpScan": "ప్రస్తుత ఫోటో",
+    "improvement": "మెరుగుదల శాతం",
+    "status": "పరిస్థితి",
+    "uploadFollowUp": "కొత్త ఫోటో అప్‌లోడ్ చేయండి"
+  },
+  "assistant": {
+    "title": "AI రైతు సహాయకుడు",
+    "subtitle": "వాయిస్ లేదా మెసేజ్ ద్వారా ప్రశ్నలు అడగండి",
+    "micStart": "మాట్లాడండి",
+    "listening": "వింటోంది...",
+    "placeholder": "మీ ప్రశ్నను టైప్ చేయండి...",
+    "citations": "మూలాలు"
+  },
+  "fertilizer": {
+    "title": "ఎరువుల క్యాలిక్యులేటర్",
+    "subtitle": "ఎన్-పి-కె పరిమాణాన్ని లెక్కించండి",
+    "calculateCta": "లెక్కించండి"
+  }
+}

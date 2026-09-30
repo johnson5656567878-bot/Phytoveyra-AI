@@ -1,0 +1,76 @@
+{
+  "appName": "PhytoVeyra AI",
+  "tagline": "ರೈತರಿಗಾಗಿ ಬಹುಭಾಷಾ AI ಬೆಳೆ ಆರೋಗ್ಯ ತಂತ್ರಜ್ಞಾನ",
+  "demoMode": "ಡೆಮೊ ಮೋಡ್ ಸಕ್ರಿಯವಾಗಿದೆ",
+  "demoBadge": "AI ಸಿಮ್ಯುಲೇಶನ್",
+  "nav": {
+    "dashboard": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "crops": "ಬೆಳೆಗಳು",
+    "scan": "ಬೆಳೆ ತಪಾಸಣೆ",
+    "treatment": "ಚಿಕಿತ್ಸೆ ಮಾರ್ಗದರ್ಶನ",
+    "schedule": "ಕಾರ್ಯಸೂಚಿ",
+    "recovery": "ಗುಣಮುಖ ಸ್ಥಿತಿ",
+    "weather": "ಹವಾಮಾನ ಮುನ್ನೆಚ್ಚರಿಕೆ",
+    "fertilizer": "ಗೊಬ್ಬರ ಲೆಕ್ಕಾಚಾರ",
+    "assistant": "AI ಸಹಾಯಕ",
+    "experts": "ತಜ್ಞರ ಸಲಹೆ",
+    "admin": "ಅಡ್ಮಿನ್",
+    "profile": "ಪ್ರೊಫೈಲ್"
+  },
+  "dashboard": {
+    "title": "ರೈತ ಆರೋಗ್ಯ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "totalCrops": "ಒಟ್ಟು ಬೆಳೆಗಳು",
+    "activeTreatments": "ಸಕ್ರಿಯ ಚಿಕಿತ್ಸೆಗಳು",
+    "upcomingTasks": "ಮುಂಬರುವ ಕೆಲಸಗಳು",
+    "recoveryProgress": "ಗುಣಮುಖ ದರ",
+    "cropHealthStatus": "ಬೆಳೆ ಆರೋಗ್ಯ ಸ್ಥಿತಿ",
+    "recentScans": "ಇತ್ತೀಚಿನ ತಪಾಸಣೆಗಳು",
+    "diseaseAlerts": "ರೋಗ ಮತ್ತು ಕೀಟ ಮುನ್ನೆಚ್ಚರಿಕೆ",
+    "weatherWidget": "ಸ್ಥಳೀಯ ಹವಾಮಾನ",
+    "quickScan": "ಈಗಲೇ ಪರಿಶೀಲಿಸಿ"
+  },
+  "scan": {
+    "title": "AI ಬೆಳೆ ರೋಗ ಪತ್ತೆ",
+    "subtitle": "ರೋಗಪೀಡಿತ ಎಲೆಯ ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+    "dragDrop": "ಫೋಟೋ ಇಲ್ಲಿದೆ ಎಳೆಯಿರಿ ಅಥವಾ ಕ್ಲಿಕ್ ಮಾಡಿ",
+    "analyzing": "AI ತಪಾಸಣೆ ನಡೆಸುತ್ತಿದೆ...",
+    "gradCamToggle": "ಹೀಟ್‌ಮ್ಯಾಪ್ ನೋಡಿ",
+    "lowConfidenceWarning": "ಫಲಿತಾಂಶ ಅನಿಶ್ಚಿತವಾಗಿದೆ",
+    "lowConfidenceDetail": "ನಿಖರತೆ 65% ಕ್ಕಿಂತ ಕಡಿಮೆಯಿದೆ. ದಯವಿಟ್ಟು ಸ್ಪಷ್ಟ ಬೆಳಕಿನಲ್ಲಿ ಮತ್ತೆ ಫೋಟೋ ತೆಗೆಯಿರಿ.",
+    "askExpertCta": "ಕೃಷಿ ತಜ್ಞರನ್ನು ಕೇಳಿ"
+  },
+  "treatment": {
+    "title": "ಶಿಫಾರಸು ಮಾಡಿದ ಚಿಕಿತ್ಸೆಗಳು",
+    "problem": "ಪತ್ತೆಯಾದ ಸಮಸ್ಯೆ",
+    "whyHappening": "ಮುಖ್ಯ ಕಾರಣ",
+    "immediateAction": "ತಕ್ಷಣದ ಕ್ರಮ",
+    "cultural": "ನೈಸರ್ಗಿಕ ಕ್ರಮಗಳು",
+    "organic": "ಜೈವಿಕ ಆಯ್ಕೆ",
+    "chemical": "ರಾಸಾಯನಿಕ ಆಯ್ಕೆ",
+    "safetyWarning": "ಸುರಕ್ಷತಾ ಎಚ್ಚರಿಕೆ",
+    "sourceCitation": "ಅಧಿಕೃತ ಮೂಲ",
+    "addToSchedule": "ಕಾರ್ಯಸೂಚಿಗೆ ಸೇರಿಸಿ"
+  },
+  "recovery": {
+    "title": "ಬೆಳೆ ಚೇತರಿಕೆ ಹೋಲಿಕೆ",
+    "subtitle": "ಚಿಕಿತ್ಸೆ ನೀಡುವ ಮೊದಲು ಮತ್ತು ನಂತರದ ಫೋಟೋಗಳನ್ನು ಹೋಲಿಸಿ",
+    "initialScan": "ಮೊದಲ ಫೋಟೋ",
+    "followUpScan": "ಇಂದಿನ ಫೋಟೋ",
+    "improvement": "ಸುಧಾರಣೆ ಶೇಕಡಾವಾರು",
+    "status": "ಚೇತರಿಕೆ ಸ್ಥಿತಿ",
+    "uploadFollowUp": "ಹೊಸ ಫೋಟೋ ನೀಡಿ"
+  },
+  "assistant": {
+    "title": "AI ರೈತ ಸಹಾಯಕ",
+    "subtitle": "ಧ್ವನಿ ಅಥವಾ ಸಂದೇಶದ ಮೂಲಕ ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಪ್ರಶ್ನೆ ಕೇಳಿ",
+    "micStart": "ಮಾತನಾಡಿ",
+    "listening": "ಆಲಿಸುತ್ತಿದೆ...",
+    "placeholder": "ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಟೈಪ್ ಮಾಡಿ...",
+    "citations": "ಮೂಲಗಳು"
+  },
+  "fertilizer": {
+    "title": "ಗೊಬ್ಬರ ಕ್ಯಲ್ಕುಲೇಟರ್",
+    "subtitle": "ಎನ್‌-ಪಿ-ಕೆ ಪ್ರಮಾಣವನ್ನು ಲೆಕ್ಕ ಹಾಕಿ",
+    "calculateCta": "ಲೆಕ್ಕ ಹಾಕಿ"
+  }
+}
