@@ -23,9 +23,12 @@ class Settings(BaseSettings):
     )
 
     # AI Configuration
-    AI_PROVIDER: str = os.getenv("AI_PROVIDER", "openai")
+    AI_PROVIDER: str = os.getenv("AI_PROVIDER", "gemini")  # options: gemini, openai, groq, openrouter, local
     AI_API_KEY: Optional[str] = os.getenv("AI_API_KEY", None)
+    GEMINI_API_KEY: Optional[str] = os.getenv("GEMINI_API_KEY", None)
     OPENAI_API_KEY: Optional[str] = os.getenv("OPENAI_API_KEY", None)
+    GROQ_API_KEY: Optional[str] = os.getenv("GROQ_API_KEY", None)
+    OPENROUTER_API_KEY: Optional[str] = os.getenv("OPENROUTER_API_KEY", None)
     SARVAM_API_KEY: Optional[str] = os.getenv("SARVAM_API_KEY", None)
     STT_API_KEY: Optional[str] = os.getenv("STT_API_KEY", None)
     TTS_API_KEY: Optional[str] = os.getenv("TTS_API_KEY", None)

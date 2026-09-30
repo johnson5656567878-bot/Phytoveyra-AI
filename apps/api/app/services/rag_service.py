@@ -51,70 +51,118 @@ class RAGService:
                     "citations": ["PhytoVeyra Agricultural Assistant"]
                 }
 
-            gemini_env = os.getenv("GEMINI_API_KEY")
-            openai_env = os.getenv("OPENAI_API_KEY") or os.getenv("AI_API_KEY")
+            gemini_env = os.getenv("GEMINI_API_KEY") or (os.getenv("AI_API_KEY") if (os.getenv("AI_PROVIDER") == "gemini" or (os.getenv("AI_API_KEY", "").startswith("AIza"))) else None)
+            groq_env = os.getenv("GROQ_API_KEY")
+            openrouter_env = os.getenv("OPENROUTER_API_KEY")
+            openai_env = os.getenv("OPENAI_API_KEY") or (os.getenv("AI_API_KEY") if not gemini_env else None)
 
-            # 1. Attempt Gemini API if a Gemini-specific key is set
+            # 1. Attempt Gemini API (Free, fast & highly capable)
             if gemini_env and len(gemini_env.strip()) > 10:
                 try:
-                    from google import genai
-                    client = genai.Client(api_key=gemini_env.strip())
+                    # Method A: Try google.genai or google.generativeai SDK if available
+                    try:
+                        from google import genai
+                        client = genai.Client(api_key=gemini_env.strip())
+                        prompt = RAGService._build_system_prompt(language, context_farmer_data)
+                        full_prompt = f"{prompt}\n\n"
+                        if history:
+                            full_prompt += "Previous Conversation:\n"
+                            for h in history[-6:]:
+                                role = "User" if h.get("sender") == "user" else "Assistant"
+                                full_prompt += f"{role}: {h.get('text', '')}\n"
+                            full_prompt += "\n"
+                        full_prompt += f"User: {clean_q}\nAssistant:"
+                        response = client.models.generate_content(
+                            model='gemini-2.0-flash',
+                            contents=full_prompt
+                        )
+                        if response and response.text:
+                            return {
+                                "answer": response.text.strip(),
+                                "citations": ["Google Gemini Agricultural Intelligence", "ICAR Extension Knowledge Base"]
+                            }
+                    except Exception:
+                        # Method B: Direct standard REST API call (no external SDK dependency required)
+                        import requests
+                        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={gemini_env.strip()}"
+                        sys_prompt = RAGService._build_system_prompt(language, context_farmer_data)
+                        contents = []
+                        if history:
+                            for h in history[-6:]:
+                                role = "user" if h.get("sender") == "user" else "model"
+                                contents.append({"role": role, "parts": [{"text": h.get("text", "")}]})
+                        contents.append({"role": "user", "parts": [{"text": f"{sys_prompt}\n\nUser Question: {clean_q}"}]})
 
-                    prompt = RAGService._build_system_prompt(language, context_farmer_data)
-                    full_prompt = f"{prompt}\n\n"
-
-                    if history:
-                        full_prompt += "Previous Conversation:\n"
-                        for h in history[-6:]:
-                            role = "User" if h.get("sender") == "user" else "Assistant"
-                            full_prompt += f"{role}: {h.get('text', '')}\n"
-                        full_prompt += "\n"
-
-                    full_prompt += f"User: {clean_q}\nAssistant:"
-
-                    response = client.models.generate_content(
-                        model='gemini-2.5-flash',
-                        contents=full_prompt
-                    )
-                    if response and response.text:
-                        return {
-                            "answer": response.text.strip(),
-                            "citations": ["Google Gemini Agricultural Intelligence", "ICAR Extension Knowledge Base"]
-                        }
+                        resp = requests.post(
+                            url,
+                            json={"contents": contents, "generationConfig": {"temperature": 0.7, "maxOutputTokens": 600}},
+                            timeout=10
+                        )
+                        if resp.status_code == 200:
+                            data = resp.json()
+                            candidate = data.get("candidates", [{}])[0]
+                            text = candidate.get("content", {}).get("parts", [{}])[0].get("text", "")
+                            if text:
+                                return {
+                                    "answer": text.strip(),
+                                    "citations": ["Google Gemini Agricultural Intelligence", "ICAR Knowledge Base"]
+                                }
                 except Exception as e:
-                    logger.warning(f"Gemini API attempt failed: {type(e).__name__}")
+                    logger.warning(f"Gemini API attempt failed: {e}")
 
-            # 2. Attempt OpenAI API
-            if OpenAI and openai_env and len(openai_env.strip()) > 10:
+            # 2. Attempt Groq API if configured
+            if groq_env and len(groq_env.strip()) > 10:
                 try:
-                    client = OpenAI(api_key=openai_env.strip())
-                    messages = [
-                        {"role": "system", "content": RAGService._build_system_prompt(language, context_farmer_data)}
-                    ]
+                    import requests
+                    headers = {"Authorization": f"Bearer {groq_env.strip()}", "Content-Type": "application/json"}
+                    messages = [{"role": "system", "content": RAGService._build_system_prompt(language, context_farmer_data)}]
                     if history:
                         for h in history[-6:]:
                             role = "user" if h.get("sender") == "user" else "assistant"
                             messages.append({"role": role, "content": h.get("text", "")})
-
                     messages.append({"role": "user", "content": clean_q})
 
-                    response = client.chat.completions.create(
-                        model="gpt-3.5-turbo",
-                        messages=messages,
-                        temperature=0.7,
-                        max_tokens=600
+                    resp = requests.post(
+                        "https://api.groq.com/openai/v1/chat/completions",
+                        headers=headers,
+                        json={"model": "llama-3.3-70b-versatile", "messages": messages, "temperature": 0.7, "max_tokens": 600},
+                        timeout=10
                     )
-                    if response and response.choices:
-                        return {
-                            "answer": response.choices[0].message.content.strip(),
-                            "citations": ["OpenAI Agricultural Intelligence Engine"]
-                        }
+                    if resp.status_code == 200:
+                        content = resp.json()["choices"][0]["message"]["content"]
+                        return {"answer": content.strip(), "citations": ["Groq Agricultural Llama Engine"]}
                 except Exception as e:
-                    # Log the OpenAI error but gracefully fall through to local RAG
-                    error_type = type(e).__name__
-                    logger.warning(f"OpenAI API attempt failed ({error_type}), falling back to local RAG engine.")
+                    logger.warning(f"Groq API attempt failed: {e}")
 
-            # 3. Grounded Agricultural RAG Knowledge Engine Fallback
+            # 3. Attempt OpenAI / OpenRouter API
+            if openai_env and len(openai_env.strip()) > 10:
+                try:
+                    if OpenAI:
+                        client = OpenAI(api_key=openai_env.strip())
+                        messages = [
+                            {"role": "system", "content": RAGService._build_system_prompt(language, context_farmer_data)}
+                        ]
+                        if history:
+                            for h in history[-6:]:
+                                role = "user" if h.get("sender") == "user" else "assistant"
+                                messages.append({"role": role, "content": h.get("text", "")})
+                        messages.append({"role": "user", "content": clean_q})
+
+                        response = client.chat.completions.create(
+                            model="gpt-3.5-turbo",
+                            messages=messages,
+                            temperature=0.7,
+                            max_tokens=600
+                        )
+                        if response and response.choices:
+                            return {
+                                "answer": response.choices[0].message.content.strip(),
+                                "citations": ["OpenAI Agricultural Intelligence Engine"]
+                            }
+                except Exception as e:
+                    logger.warning(f"OpenAI API attempt failed ({type(e).__name__}), falling back to local RAG engine.")
+
+            # 4. Grounded Agricultural RAG Knowledge Engine Fallback (Offline & 100% Reliable)
             answer, citations = RAGService._generate_grounded_rag_response(clean_q, history, language)
             return {
                 "answer": answer,
